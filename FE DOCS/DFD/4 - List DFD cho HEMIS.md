@@ -1,0 +1,33 @@
+Chào bạn, dựa trên danh sách Use-case từ tài liệu **STU_STAGE 2_HEMIS** và các nguyên tắc vẽ sơ đồ **Symbol Logic (Context Diagram & DFD)**, tôi đã tổng hợp và quy hoạch lại danh sách các sơ đồ cần vẽ.
+
+**Lưu ý quan trọng trước khi xem bảng:** Đúng như bạn đã nhận định, sơ đồ DFD **không có tỷ lệ 1:1** với Use-case. Use-case tập trung vào _hành động của người dùng_, trong khi DFD tập trung vào _sự luân chuyển và biến đổi của dữ liệu_ qua các Kho lưu trữ (Data Stores). Do đó:
+
+1. **Level 0 (Context Diagram):** Chỉ có 1 sơ đồ duy nhất gom toàn bộ hệ thống thành 1 hộp đen (hệ thống HEMIS).
+2. **Level 1 (DFD):** Sẽ gộp các cụm Use-case có chung một luồng nghiệp vụ lớn (Ví dụ: Cụm Quản lý tài khoản, Cụm Luân chuyển dữ liệu nghiệp vụ).
+3. **Level 2 (DFD):** Là bước phân rã chi tiết của Level 1, đi sâu vào từng chức năng cụ thể như Thêm, Sửa, Xóa, Duyệt (tương đương với việc gộp 1-3 use-case chi tiết lại với nhau).
+
+Dưới đây là danh sách các sơ đồ DFD/Context Diagram cần thực hiện, được thiết kế bám sát theo form bảng của bạn:
+
+### DANH SÁCH SƠ ĐỒ DFD & CONTEXT DIAGRAM (STAGE 2)
+
+|  STT  | Vai trò (Role)                   | Loại Level DFD (0,1,2)          | Link (Tài liệu đối chiếu)                                                            | Mô tả Sơ đồ                                                                                                                                                                                                                                                     |
+| :---: | :------------------------------- | :------------------------------ | :----------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | **ALL** (Tất cả Role)            | **Level 0** _(Context Diagram)_ | Các file Use-case Tổng quát                                                          | **SƠ ĐỒ NGỮ CẢNH TOÀN HỆ THỐNG HEMIS:** Thể hiện hệ thống HEMIS là 1 Process duy nhất. Vẽ các Tác nhân (Proposer, QC, DA, Admins, Viewer) xung quanh. Thể hiện luồng dữ liệu tổng quát đi vào (Input) và thông tin trả về (Output) mà không vẽ Database.        |
+| **2** | **GROUP ADMIN & ALL**            | **Level 1**                     | Nhóm nghiệp vụ AUTH & PERSONAL INFO                                                  | **QUẢN LÝ ĐỊNH DANH & BẢO MẬT:** Phân rã luồng Đăng nhập, Đổi/Quên mật khẩu, Quản lý thông tin cá nhân và các nghiệp vụ Cấp pass, Phân quyền của Admin. Cho thấy sự tương tác với Data Store: _DB Accounts_ và _DB Audit Log_.                                  |
+| **3** | **PROPOSER, QC, DA**             | **Level 1**                     | Nhóm nghiệp vụ CRUD & WORK-FLOW                                                      | **LUÂN CHUYỂN DỮ LIỆU NGHIỆP VỤ:** Phân rã toàn bộ quá trình Nhập liệu -> Kiểm định -> Phê duyệt. Thể hiện rõ dòng chảy dữ liệu đi qua các khâu và được lưu trữ vào Data Store: _DB Staging_ trước khi được đẩy sang _DB Core_.                                 |
+| **4** | **VIEWER, AUDIT, ALL**           | **Level 1**                     | Nhóm nghiệp vụ REPORT & LOG                                                          | **KHAI THÁC BÁO CÁO & KIỂM TOÁN:** Luồng trích xuất dữ liệu từ các Data Store: _DB Reporting_ và _DB Audit Log_, qua quá trình định dạng biểu đồ/bảng biểu và trả về file Excel/PDF cho người dùng.                                                             |
+| **5** | **ALL**                          | **Level 2**                     | `1-GROUP-USER-ADMIN-LOGIN``2-GROUP-USER-QUÊN-MẬT-KHẨU`                               | **CHI TIẾT ĐĂNG NHẬP & QUÊN MẬT KHẨU:** Phân rã chi tiết luồng xác thực. Từ lúc nhập email, kiểm tra Database, tạo/gửi mã OTP, đối soát mã, đến khi ghi nhận Audit Log và cấp session.                                                                          |
+| **6** | **ADMIN SECURITY, ADMIN SYSTEM** | **Level 2**                     | `3-ADMIN-SECURITY-THÊM-TK``1-ADMIN-SECURITY-PHÂN-QUYỀN``ADMIN-SECURITY-LOCK ACCOUNT` | **CHI TIẾT QUẢN LÝ TÀI KHOẢN:** Phân rã luồng công việc của Admin Security. Cụ thể dòng dữ liệu khi thêm user mới (mặc định No Role), sửa Role, khóa tài khoản khẩn cấp và cách hệ thống lưu log bảo mật.                                                       |
+| **7** | **PROPOSER**                     | **Level 2**                     | `4-PROPOSER-THÊM-DỮ-LIỆU``3-PROPOSER-SỬA-DỮ-LIỆU``5-PROPOSER-XÓA(MỀM)`               | **CHI TIẾT LUỒNG NHẬP LIỆU CỦA PROPOSER:** Phân rã chi tiết cách dữ liệu từ Form (hoặc Import Excel) đi qua khâu Validate, ánh xạ dữ liệu và lưu nháp/lưu chính thức vào _DB Staging_. Ghi nhận trạng thái 'Draft' hoặc 'Chờ duyệt'.                            |
+| **8** | **QC, DA**                       | **Level 2**                     | `3-QC-KIỂM-ĐỊNH-DỮ-LIỆU``QUALITY-CONTROLLER-TỪ-CHỐI``3-DA-KIỂM-ĐỊNH-DỮ-LIỆU`         | **CHI TIẾT LUỒNG KIỂM ĐỊNH & PHÊ DUYỆT:** Thể hiện cách QC truy xuất _DB Staging_ để đối soát, luồng rẽ nhánh khi Từ chối (trả về Proposer) hoặc Duyệt. Đặc biệt thể hiện Process tự động của hệ thống: Khi DA duyệt, copy data từ _DB Staging_ sang _DB Core_. |
+| **9** | **VIEWER, PROPOSER, QC, DA**     | **Level 2**                     | `2-VIEWER-REPORT-XUẤT-DỮ-LIỆU``ĐỌC-REPORT`                                           | **CHI TIẾT XUẤT VÀ LỌC BÁO CÁO:** Quá trình Tác nhân đưa bộ lọc (Filter/Search criteria) vào hệ thống, truy vấn _DB Reporting_, gom nhóm dữ liệu và xuất ra định dạng file Excel trả về cho thiết bị.                                                           |
+
+---
+
+**Giải thích thêm về cấu trúc này cho team Vẽ Sơ đồ:**
+
+- **Level 0** sẽ cho Ban giám hiệu hoặc khách hàng thấy toàn cảnh ai đang dùng hệ thống.
+- **Các sơ đồ Level 1 (STT 2, 3, 4)** rất quan trọng để team Database thấy được dữ liệu sẽ chạm vào các tầng DB nào (Staging, Core, Report, Audit).
+- **Các sơ đồ Level 2 (STT 5, 6, 7, 8, 9)** là dành cho team Backend code API, nhìn vào sẽ biết Input là gì, đi qua các hàm xử lý (Process) nào và lưu vào bảng nào (Data Store).
+
+Bạn có muốn tôi chọn một sơ đồ cụ thể (ví dụ: **STT 7 - Level 2: Chi tiết luồng nhập liệu của Proposer**) để viết bản nháp phân tích luồng dữ liệu (Data flows, Processes, Data Stores) làm mẫu cho các bạn Developer dễ hình dung trước khi vẽ không?
