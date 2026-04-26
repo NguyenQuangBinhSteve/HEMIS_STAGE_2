@@ -33,7 +33,8 @@
 Trong Sơ đồ ngữ cảnh (Context Diagram), logic hoạt động được xây dựng dựa trên ba ký hiệu chính: Thực thể bên ngoài (External Entity), Quy trình (Process - là một vòng tròn duy nhất đại diện cho toàn bộ hệ thống thông tin) và Đường luồng dữ liệu (Flow Lines).
 
 Sự tương tác qua lại giữa **Thực thể bên ngoài** và **Quy trình (Hệ thống thông tin)** được thể hiện cốt lõi thông qua 2 luồng dữ liệu (vào và ra) như sau:
-![[Context Diagram Prototype.png]]
+
+<img src="FE DOCS/PIC DFD/Context Diagram Diagram.png" alt="Context Diagram Diagram" width="600">
 ### **1. Luồng dữ liệu đi vào hệ thống (Data entered into the information system by External Entity):**
 
 - Đây là đường mũi tên hướng từ Thực thể bên ngoài (có thể là người dùng, sản phẩm hoặc hệ thống khác) chỉ vào vòng tròn Hệ thống thông tin.

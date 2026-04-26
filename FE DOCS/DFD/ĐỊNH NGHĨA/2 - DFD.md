@@ -33,7 +33,7 @@ Dưới đây là phân tích chi tiết về các quy luật logic cốt lõi n
 Dựa trên logic của hệ thống ký hiệu (Symbol Logic), Sơ đồ Luồng dữ liệu (Data Flow Diagram - DFD) là bước "phá vỡ" chiếc hộp đen của Sơ đồ Ngữ cảnh ra thành nhiều phần nhỏ để xem xét chi tiết bên trong.
 
 Khác với Sơ đồ ngữ cảnh (chỉ có 1 quy trình duy nhất), DFD sử dụng đến 4 loại ký hiệu: **Tác nhân bên ngoài (External Entity)**, **Quy trình (Process)**, **Đường luồng dữ liệu (Flow Line)**, và đặc biệt là sự xuất hiện của **Kho lưu trữ (Data Store)**.
-![[DFD Prototype.png]]
+<img src="FE DOCS/PIC DFD/DFD Diagram.png" alt="DFD Diagram" width="600">
 ### 1. Khởi nguồn từ Tác nhân bên ngoài (External Entity Input):  
 
 Luồng dữ liệu luôn bắt đầu khi một tác nhân bên ngoài (có thể là một người dùng, một sản phẩm hoặc một hệ thống khác) nhập hoặc đưa dữ liệu (data) vào hệ thống thông tin thông qua một đường luồng dữ liệu (Flow Line).
