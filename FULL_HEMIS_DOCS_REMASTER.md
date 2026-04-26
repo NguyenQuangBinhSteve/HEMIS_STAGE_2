@@ -30,6 +30,7 @@ Mô hình hiện tại đang tiềm ẩn một số rủi ro về bảo mật, t
 > - Xây dựng cơ chế **Audit độc lập**, đảm bảo truy vết được mọi thay đổi diễn ra trong kho dữ liệu.
 
 <img src="HEMIS-PIC/Tóm Tắt Vấn Đề.png" alt="Tóm Tắt Vấn Đề" width="600">
+
 **Hình 1:** Tóm tắt bối cảnh
 
 ---
@@ -77,6 +78,7 @@ Trong đó:
 > - Tầng này hoạt động độc lập và tuân thủ quy tắc **Append-only (Chỉ ghi thêm) do hệ thống tự sinh**; tuyệt đối không ai (kể cả System Administrator hay Security Administrator) được phép sửa hoặc xóa dữ liệu log thông qua giao diện nghiệp vụ.
 
 <img src="HEMIS-PIC/Hemis Tầng dữ liệu.png" alt="Hemis Tầng dữ liệu" width="600">
+
 **Hình 2:** Tóm tắt các tầng
 
 ---
