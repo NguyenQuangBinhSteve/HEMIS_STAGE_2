@@ -3,7 +3,7 @@
 **Giải thích logic Sơ đồ Mức 0:** Sơ đồ này nhìn hệ thống YouTube như một "hộp đen" duy nhất. Nó không quan tâm bên trong YouTube xử lý thuật toán ra sao hay dùng cơ sở dữ liệu nào, mà chỉ tập trung vào việc: Ai tương tác với YouTube? Họ đưa dữ liệu gì vào và nhận lại thông tin gì?
 
 **Bảng mô tả các thành phần Sơ đồ Mức 0:**
-<img src="FE DOCS/PIC DFD/Context Diagram Youtube.png" alt="Context Diagram Youtube" width="600">
+<img src="../../PIC DFD/Context Diagram Youtube.png" alt="Context Diagram Youtube" width="600">
 
 |  STT  | Loại thành phần                | Tên thành phần                         | Mô tả chức năng và Luồng dữ liệu (Flow Lines)                                                                                                                                                                                                                                                                                                                                     |
 | :---: | :----------------------------- | :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@
 **Giải thích logic Sơ đồ Mức 1:** Đây là bước "mở hộp đen" của YouTube ra. Lúc này, hệ thống duy nhất ở Mức 0 được bóc tách thành nhiều quy trình (Processes) nhỏ hơn. Đồng thời, Sơ đồ Mức 1 bắt buộc phải có sự xuất hiện của Kho lưu trữ dữ liệu (Data Store) để phân loại người dùng và quản lý video.
 
 **Bảng mô tả các thành phần Sơ đồ Mức 1:**
-<img src="FE DOCS/PIC DFD/Data Flow Diagram Youtube.png" alt="Data Flow Diagram Youtube" width="600">
+<img src="../../PIC DFD/Data Flow Diagram Youtube.png" alt="Data Flow Diagram Youtube" width="600">
 
 |STT|Loại thành phần|Tên thành phần|Mô tả chức năng và Luồng dữ liệu luân chuyển (Flow Lines)|
 |:-:|:--|:--|:--|

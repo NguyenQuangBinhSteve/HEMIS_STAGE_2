@@ -6,7 +6,7 @@
 - **Hiểu rõ ranh giới và logic của hệ thống:** Việc nắm vững logic ký hiệu giúp bạn phân định rõ ràng đâu là các yếu tố nằm ngoài hệ thống (External Entity) và đâu là các bước xử lý (Process) bên trong hệ thống. Nếu không hiểu logic này, bạn sẽ dễ bị nhầm lẫn khi vẽ luồng di chuyển và biến đổi của dữ liệu giữa nhiều quy trình phức tạp trong DFD.
 - **Đảm bảo tính nhất quán:** Mỗi ký hiệu mang một quy tắc riêng (ví dụ: Context Diagram chỉ có duy nhất 1 hình tròn, DFD thì có nhiều hình tròn và thêm kho dữ liệu). Nắm vững nguyên tắc này giúp sơ đồ thiết kế ra đạt chuẩn và dễ dàng truyền đạt cho các nhóm phát triển (Dev) hoặc phân tích hệ thống (BA).
   
-<img src="FE DOCS/PIC DFD/Symbol Logic Diagram.png" alt="Symbol Logic Diagram" width="600">
+<img src="../../PIC DFD/Symbol Logic Diagram.png" alt="Symbol Logic Diagram" width="600">
 ### Sơ đồ này dùng để làm gì?
 
 Sơ đồ này được sử dụng để minh họa trực quan cách một hệ thống thông tin hoạt động một cách tổng thể. Nó cho thấy luồng dữ liệu bắt đầu từ đâu (ai/cái gì gửi dữ liệu vào hệ thống), dữ liệu được hệ thống biến đổi qua các quy trình như thế nào, dữ liệu được lưu trữ ở đâu và cuối cùng kết quả (thông tin) sẽ được trả về cho ai.
