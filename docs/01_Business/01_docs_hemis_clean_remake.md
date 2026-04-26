@@ -29,7 +29,7 @@ Mô hình hiện tại đang tiềm ẩn một số rủi ro về bảo mật, t
 > - Thiết lập cơ chế **bảo toàn dữ liệu chính thức**, ngăn chặn mọi hành vi thay đổi trái phép tại tầng Core.
 > - Xây dựng cơ chế **Audit độc lập**, đảm bảo truy vết được mọi thay đổi diễn ra trong kho dữ liệu.
 
-<img src="HEMIS-PIC/Tóm Tắt Vấn Đề.png" alt="Tóm Tắt Vấn Đề" width="600">
+<img src="../../assets/images_hemis/Tóm Tắt Vấn Đề.png" alt="Tóm Tắt Vấn Đề" width="600">
 
 **Hình 1:** Tóm tắt bối cảnh
 
@@ -77,7 +77,7 @@ Trong đó:
 >
 > - Tầng này hoạt động độc lập và tuân thủ quy tắc **Append-only (Chỉ ghi thêm) do hệ thống tự sinh**; tuyệt đối không ai (kể cả System Administrator hay Security Administrator) được phép sửa hoặc xóa dữ liệu log thông qua giao diện nghiệp vụ.
 
-<img src="HEMIS-PIC/Hemis Tầng dữ liệu.png" alt="Hemis Tầng dữ liệu" width="600">
+<img src="../../assets/images_hemis/Hemis Tầng dữ liệu.png" alt="Hemis Tầng dữ liệu" width="600">
 
 **Hình 2:** Tóm tắt các tầng
 
@@ -173,7 +173,7 @@ _(Ghi chú: Định nghĩa các ký hiệu viết tắt: C=Create, U=Update, D=S
 > 
 > >**Đã duyệt DA:** Trạng thái phê duyệt tối cao. Sau khi đạt trạng thái này, hệ thống sẽ **tự động thực hiện hành động c) Chuyển tiếp** để đẩy dữ liệu gốc từ vùng Staging sang vùng chính thức (Core).
 
-<img src="HEMIS-PIC/Flow Duyệt Dữ Liệu Theo State.png" alt="Flow Duyệt Dữ Liệu Theo State" width="600">
+<img src="../../assets/images_hemis/Flow Duyệt Dữ Liệu Theo State.png" alt="Flow Duyệt Dữ Liệu Theo State" width="600">
 **HÌnh 2.1:** Sơ đồ work-flow trạng thái (Draw.io)
 
 
