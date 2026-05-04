@@ -37,5 +37,3 @@ Dưới đây là kết quả kiểm định chi tiết:
 - _Luồng 11:_ "Truyền thông tin" -> **"Dữ liệu định danh người dùng"**
 
 Với cách sửa này, bản vẽ sẽ đạt điểm tuyệt đối về mặt học thuật và kỹ thuật vẽ DFD.
-
-Bạn có muốn tôi tiếp tục sử dụng format này để kiểm định sơ đồ tiếp theo là **3 - LEVEL 1 - DFD ĐĂNG NHẬP & QUÊN MẬT KHẨU** (hoặc một DFD Level 2 nào đó) để hoàn tất việc rà soát không?
