@@ -71,7 +71,3 @@ Vùng tóm tắt trạng thái nằm cuối cùng của vùng nội dung.
 | **StatsGrid**   | `grid grid-cols-4 gap-4 mt-auto`            | Bố cục 4 cột cố định cho 4 trạng thái dữ liệu.                           |
 | **StatsCard**   | `bg-white border rounded-lg p-4 flex gap-4` | Thẻ tóm tắt bao gồm: StatsIcon (vòng tròn màu) và StatsLabel/StatsCount. |
 | **StatsLabels** | `Nháp, Chờ duyệt, Đang duyệt, Đã duyệt`     | 04 nhãn trạng thái nghiệp vụ cố định.                                    |
-
----
-
-Tài liệu này được trích xuất trực tiếp từ cấu trúc CSS+HTML `Main Template: Training Program Management - Main Source Using (DO NOT DELETE)`, đảm bảo tính đồng bộ tuyệt đối về mặt kỹ thuật cho các yêu cầu phát triển sau này
