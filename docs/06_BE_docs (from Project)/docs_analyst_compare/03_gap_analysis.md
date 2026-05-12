@@ -97,12 +97,12 @@ Mỗi sub-module cần tạo/cập nhật ở **4 layer**:
 | 8 | `DM_DON_VI_CAP_BANG` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
 | 9 | `DM_TRANG_THAI_CHUONG_TRINH_DAO_TAO` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
 | 10 | `DM_LOAI_QUYET_DINH_CTDT` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
-| 11 | `DM_TO_CHUC_KIEM_DINH` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
-| 12 | `DM_KET_QUA_KIEM_DINH` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
+| 11 | `DM_TO_CHUC_KIEM_DINH` | ✅ | ✅ | ✅ | ✅ | ✅ | ĐÃ CÓ |
+| 12 | `DM_KET_QUA_KIEM_DINH` | ✅ | ✅ | ✅ | ✅ | ✅ | ĐÃ CÓ |
 | 13 | `DM_NGOAI_NGU` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
 | 14 | `DM_KHUNG_NANG_LUC_NGOAI_NGU` | ✅ | ❌ | ❌ | ❌ | ❌ | THIẾU |
 
-**Tóm tắt**: SQL definitions đã sẵn sàng **14/14**. Backend mới implement **0/14** (chỉ có `DM_CO_QUAN_CHU_QUAN` không thuộc scope CTĐT).
+**Tóm tắt**: SQL definitions đã sẵn sàng **14/14**. Backend mới implement **2/14** (đã hoàn thành DM_TO_CHUC_KIEM_DINH và DM_KET_QUA_KIEM_DINH).
 
 ---
 
@@ -110,8 +110,8 @@ Mỗi sub-module cần tạo/cập nhật ở **4 layer**:
 
 | Tính năng | Backend Cũ | Backend Mới | Gap | Ưu tiên |
 |---|---|---|---|---|
-| **CRUD cơ bản** (5 endpoints/entity) | ✅ 30 endpoints (6 sub-modules × 5 ops) | ⚠️ 5 endpoints (chỉ NAM_AP_DUNG) | Thiếu 25 endpoints | 🔴 Cao |
-| **DM CRUD** | ✅ ~70 bảng | ⚠️ 1 bảng (DM_CO_QUAN_CHU_QUAN) | Thiếu 14 bảng DM CTĐT | 🔴 Cao |
+| **CRUD cơ bản** (5 endpoints/entity) | ✅ 30 endpoints (6 sub-modules × 5 ops) | ⚠️ 15 endpoints (NamApDung + 2 Danh mục mới) | Thiếu 15 endpoints (cho 5 sub-modules CTĐT còn lại) | 🔴 Cao |
+| **DM CRUD** | ✅ ~70 bảng | ⚠️ 3 bảng (CO_QUAN_CHU_QUAN + 2 DM Kiểm định) | Thiếu 12 bảng DM CTĐT | 🔴 Cao |
 | **Pagination** | ✅ `PaginatedResponse{data,total,page,size,pages}` | ❌ Trả về toàn bộ list | Cần implement | 🔴 Cao |
 | **Search/Filter** | ✅ Heuristic search (tự chọn cột) | ❌ Không có | Cần implement | 🟡 Trung bình |
 | **Excel Export** | ✅ StreamingResponse + openpyxl | ❌ Không có | Cần implement | 🟡 Trung bình |
