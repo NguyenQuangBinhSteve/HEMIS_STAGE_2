@@ -6,13 +6,11 @@
 > **Ngày tạo**: 2026-05-11  
 
 ---
-
 ## 1. Mô tả tổng quan
 
 Module **Chương Trình Đào Tạo** quản lý toàn bộ thông tin liên quan đến các chương trình đào tạo của cơ sở giáo dục đại học, bao gồm: thông tin chương trình, năm áp dụng, quyết định cấp phép, kiểm định chất lượng, gia hạn, và ngôn ngữ giảng dạy.
 
 ---
-
 ## 2. Danh sách Sub-module (6 bảng)
 
 | STT | Tên bảng | File đặc tả | Mô tả |
@@ -25,7 +23,6 @@ Module **Chương Trình Đào Tạo** quản lý toàn bộ thông tin liên qu
 | 6 | `NGON_NGU_GIANG_DAY` | [06_NGON_NGU_GIANG_DAY.md](./06_NGON_NGU_GIANG_DAY.md) | Ngôn ngữ sử dụng trong giảng dạy và yêu cầu đầu vào |
 
 ---
-
 ## 3. Bảng Danh Mục (DM) liên quan (15 bảng)
 
 Chi tiết giá trị của từng bảng DM xem tại: [PHU_LUC_DANH_MUC.md](./PHU_LUC_DANH_MUC.md)
@@ -51,7 +48,6 @@ Chi tiết giá trị của từng bảng DM xem tại: [PHU_LUC_DANH_MUC.md](./
 > **Lưu ý**: `DM_HINH_THUC_DAO_TAO` xuất hiện 2 lần (dòng 3 & 4) vì được tham chiếu bởi 2 sub-module khác nhau: `CHUONG_TRINH_DAO_TAO` và `QUYET_DINH_CAP_PHEP`.
 
 ---
-
 ## 4. Nguồn dữ liệu
 
 | Thành phần | Đường dẫn |

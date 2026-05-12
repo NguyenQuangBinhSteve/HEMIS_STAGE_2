@@ -5,13 +5,11 @@
 > **Nguồn SQL**: `db_hemis_stu_new/sql_pg/chuong_trinh_dao_tao/tables/THONG_TIN_KIEM_DINH.sql`
 
 ---
-
 ## 1. Mô tả
 
 Lưu trữ thông tin về kết quả kiểm định chất lượng của chương trình đào tạo, bao gồm tổ chức kiểm định, kết quả, số quyết định, ngày chứng nhận, và thời hạn kiểm định.
 
 ---
-
 ## 2. Đặc tả các trường
 
 | STT | Tên trường | Kiểu dữ liệu | Độ dài | Ràng buộc | Mô tả |
@@ -27,7 +25,6 @@ Lưu trữ thông tin về kết quả kiểm định chất lượng của chư
 | 9 | `UPDATED_AT` | TIMESTAMP | — | — | Thời gian cập nhật lần cuối |
 
 ---
-
 ## 3. Danh sách Index
 
 | STT | Tên Index | Trường | Mô tả |
@@ -36,7 +33,6 @@ Lưu trữ thông tin về kết quả kiểm định chất lượng của chư
 | 2 | `IX_TTKD_MA_TO_CHUC_KIEM_DINH` | `MA_TO_CHUC_KIEM_DINH` | Lọc theo tổ chức kiểm định |
 
 ---
-
 ## 4. Bảng DM liên quan
 
 | STT | Bảng Danh Mục | Trường tham chiếu | Chi tiết |

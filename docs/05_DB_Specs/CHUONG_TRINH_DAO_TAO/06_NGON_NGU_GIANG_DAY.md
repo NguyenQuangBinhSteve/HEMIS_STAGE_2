@@ -5,13 +5,11 @@
 > **Nguồn SQL**: `db_hemis_stu_new/sql_pg/chuong_trinh_dao_tao/tables/NGON_NGU_GIANG_DAY.sql`
 
 ---
-
 ## 1. Mô tả
 
 Lưu trữ thông tin ngôn ngữ sử dụng trong giảng dạy của chương trình đào tạo và yêu cầu trình độ ngoại ngữ đầu vào. Một CTĐT có thể có nhiều ngôn ngữ giảng dạy.
 
 ---
-
 ## 2. Đặc tả các trường
 
 | STT | Tên trường | Kiểu dữ liệu | Độ dài | Ràng buộc | Mô tả |
@@ -24,16 +22,14 @@ Lưu trữ thông tin ngôn ngữ sử dụng trong giảng dạy của chương
 | 6 | `UPDATED_AT` | TIMESTAMP | — | — | Thời gian cập nhật lần cuối |
 
 ---
-
 ## 3. Danh sách Index
 
-| STT | Tên Index | Trường | Mô tả |
-|-----|----------|--------|-------|
-| 1 | `IX_NNGD_MA_CHUONG_TRINH_DAO_TAO` | `MA_CHUONG_TRINH_DAO_TAO` | Truy vấn theo mã CTĐT |
-| 2 | `IX_NNGD_MA_NGON_NGU_GIANG_DAY` | `MA_NGON_NGU_GIANG_DAY` | Lọc theo ngôn ngữ giảng dạy |
+| STT | Tên Index                         | Trường                    | Mô tả                       |
+| --- | --------------------------------- | ------------------------- | --------------------------- |
+| 1   | `IX_NNGD_MA_CHUONG_TRINH_DAO_TAO` | `MA_CHUONG_TRINH_DAO_TAO` | Truy vấn theo mã CTĐT       |
+| 2   | `IX_NNGD_MA_NGON_NGU_GIANG_DAY`   | `MA_NGON_NGU_GIANG_DAY`   | Lọc theo ngôn ngữ giảng dạy |
 
 ---
-
 ## 4. Bảng DM liên quan
 
 | STT | Bảng Danh Mục | Trường tham chiếu | Chi tiết |

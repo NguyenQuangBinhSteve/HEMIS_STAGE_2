@@ -5,13 +5,11 @@
 > **Nguồn SQL**: `db_hemis_stu_new/sql_pg/chuong_trinh_dao_tao/tables/CHUONG_TRINH_DAO_TAO.sql`
 
 ---
-
 ## 1. Mô tả
 
 Bảng chính của module — lưu trữ thông tin chi tiết về các chương trình đào tạo của cơ sở giáo dục, bao gồm: mã chương trình, ngành đào tạo, hình thức đào tạo, trình độ, chuẩn đầu ra, học phí, và trạng thái hoạt động.
 
 ---
-
 ## 2. Đặc tả các trường
 
 | STT | Tên trường | Kiểu dữ liệu | Độ dài | Ràng buộc | Mô tả |
@@ -45,18 +43,16 @@ Bảng chính của module — lưu trữ thông tin chi tiết về các chươ
 | 27 | `UPDATED_AT` | TIMESTAMP | — | — | Thời gian cập nhật bản ghi lần cuối |
 
 ---
-
 ## 3. Danh sách Index
 
-| STT | Tên Index | Trường | Mô tả |
-|-----|----------|--------|-------|
-| 1 | `IX_CTDT_NGANH_ID` | `NGANH_ID` | Tăng tốc truy vấn theo ngành đào tạo |
-| 2 | `IX_CTDT_MA_CHUONG_TRINH` | `MA_CHUONG_TRINH` | Tăng tốc tra cứu theo mã chương trình |
-| 3 | `IX_CTDT_TRINH_DO_DAO_TAO` | `TRINH_DO_DAO_TAO` | Tăng tốc lọc theo trình độ đào tạo |
-| 4 | `IX_CTDT_TRANG_THAI` | `TRANG_THAI` | Tăng tốc lọc theo trạng thái chương trình |
+| STT | Tên Index                  | Trường             | Mô tả                                     |
+| --- | -------------------------- | ------------------ | ----------------------------------------- |
+| 1   | `IX_CTDT_NGANH_ID`         | `NGANH_ID`         | Tăng tốc truy vấn theo ngành đào tạo      |
+| 2   | `IX_CTDT_MA_CHUONG_TRINH`  | `MA_CHUONG_TRINH`  | Tăng tốc tra cứu theo mã chương trình     |
+| 3   | `IX_CTDT_TRINH_DO_DAO_TAO` | `TRINH_DO_DAO_TAO` | Tăng tốc lọc theo trình độ đào tạo        |
+| 4   | `IX_CTDT_TRANG_THAI`       | `TRANG_THAI`       | Tăng tốc lọc theo trạng thái chương trình |
 
 ---
-
 ## 4. Bảng DM liên quan
 
 | STT | Bảng Danh Mục | Trường tham chiếu | Chi tiết |
