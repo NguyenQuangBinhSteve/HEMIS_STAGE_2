@@ -83,11 +83,11 @@ Tài liệu này liệt kê toàn bộ giá trị của 14 bảng Danh Mục đ�
 - **Cấu trúc**: `ID`, `TEN_LOAI`
 - **Tham chiếu bởi**: `CHUONG_TRINH_DAO_TAO.LOAI_CHUONG_TRINH_LIEN_KET`
 
-| ID | TEN_LOAI |
-|----|----------|
-| 1 | 100% tại Việt Nam |
-| 2 | Tại Việt Nam và tại nước ngoài |
-| 3 | Khác |
+| ID  | TEN_LOAI                       |
+| --- | ------------------------------ |
+| 1   | 100% tại Việt Nam              |
+| 2   | Tại Việt Nam và tại nước ngoài |
+| 3   | Khác                           |
 
 ---
 ## 5. DM_HOC_CHE_DAO_TAO
